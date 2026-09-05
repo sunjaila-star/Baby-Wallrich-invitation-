@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Baby Wallrich</title>
+<style>
+body{margin:0;background:#111b3e;display:flex;justify-content:center}.wrap{position:relative;max-width:760px;width:100%}img{width:100%;display:block}a{position:absolute;display:block;border-radius:30px;outline:0}a:hover{background:#ffffff15}.rsvp{left:13%;top:78%;width:35%;height:5.5%}.cal{left:51%;top:78%;width:36%;height:5.5%}.dir{left:13%;top:84%;width:37%;height:5.5%}.reg{left:52%;top:84%;width:35%;height:5.5%}button{position:absolute;left:43%;top:73%;width:14%;height:6%;border:0;background:transparent;cursor:pointer}
+.spark{position:absolute;width:5px;height:5px;border-radius:50%;background:#fff8d5;box-shadow:0 0 9px #fff;animation:t 2s infinite;pointer-events:none}@keyframes t{50%{opacity:.15;transform:scale(.5)}}
+</style></head><body><div class="wrap"><img src="invitation.png" alt="Baby Wallrich Gender Reveal and Baby Shower invitation">
+<a class="rsvp" href="https://forms.gle/BTdRQHF97nwZFPLS6" target="_blank" aria-label="RSVP"></a>
+<a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Baby%20Wallrich%27s%20Gender%20Reveal%20%26%20Baby%20Shower&amp;dates=20261114T120000/20261114T150000&amp;details=Twinkle%2C%20twinkle%2C%20little%20star...%20How%20we%20wonder%20what%20you%20are%21%20Join%20Sunjaila%20%26%20Patrick%20as%20we%20celebrate%20Baby%20Wallrich.%20Wear%20PINK%20for%20Team%20Girl%20or%20BLUE%20for%20Team%20Boy.%20Diapers%20%26%20wipes%20are%20welcome%21%20Gifts%20of%20any%20kind%20are%20welcome%21&amp;location=Kissimmee%20Lakefront%20Park%2C%20201%20Lakeview%20Drive%2C%20Kissimmee%2C%20FL%2034741" target="_blank" aria-label="Add to Calendar"></a>
+<a class="dir" href="https://www.google.com/maps/search/?api=1&amp;query=Kissimmee+Lakefront+Park%2C+201+Lakeview+Drive%2C+Kissimmee%2C+FL+34741" target="_blank" aria-label="Get Directions"></a>
+<a class="reg" href="https://www.amazon.com/baby-reg/sunjaila-brooks-march-2027-fortlauderdale/1UR77EIQB0O8A" target="_blank" aria-label="Baby Registry"></a>
+<button id="music" aria-label="Play music"></button></div>
+<script>
+for(let i=0;i<45;i++){let s=document.createElement('i');s.className='spark';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*2+'s';document.querySelector('.wrap').appendChild(s)}
+let c,playing=false,notes=[261.63,261.63,392,392,440,440,392,349.23,349.23,329.63,329.63,293.66,293.66,261.63];
+document.getElementById('music').onclick=()=>{c=c||new AudioContext();if(playing){c.suspend();playing=false;return}c.resume();let t=c.currentTime;notes.forEach((f,i)=>{let o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.12,t+.03);g.gain.exponentialRampToValueAtTime(.0001,t+.4);o.connect(g).connect(c.destination);o.start(t);o.stop(t+.45);t+=.45});playing=true;setTimeout(()=>playing=false,7000)};
+</script></body></html>
