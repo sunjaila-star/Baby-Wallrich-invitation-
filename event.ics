@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunjaila Patrick Celebration//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sunjaila-patrick-20261114@sunjaila-star.github.io
+DTSTART;TZID=America/New_York:20261114T120000
+DTEND;TZID=America/New_York:20261114T150000
+SUMMARY:Gender Reveal & Baby Shower — Sunjaila & Patrick
+LOCATION:Kissimmee Lakefront Park\, 201 Lakeview Dr\, Kissimmee\, FL 34741
+DESCRIPTION:Join Sunjaila & Patrick for their Gender Reveal & Baby Shower. Wear pink for Team Girl or blue for Team Boy. Diapers and wipes are appreciated. Gifts of any kind are welcome.
+END:VEVENT
+END:VCALENDAR
